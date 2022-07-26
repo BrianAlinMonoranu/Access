@@ -8,41 +8,29 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Icon, IconButton } from "@mui/material";
 
 function Sidebar() {
-    return ( <
-        div className = "sidebar" >
-        <
-        div className = "sidebar__header" >
-        <
-        PersonIcon / >
+  return (
+    <div className="sidebar">
+      <div className="sidebar__header">
+        <PersonIcon />
 
-        <
-        div className = "sidebar__headerRight" >
-        <
-        IconButton >
-        <
-        MessageIcon className = "adjust" / >
-        <
-        /IconButton> <
-        IconButton >
-        <
-        AutorenewIcon className = "adjust" / >
-        <
-        /IconButton> <
-        IconButton >
-        <
-        ExpandCircleDownIcon className = "adjust" / >
-        <
-        /IconButton> <
-        /div> <
-        /div>
+        <div className="sidebar__headerRight">
+          <IconButton>
+            <MessageIcon className="adjust" />
+          </IconButton>
+          <IconButton>
+            <AutorenewIcon className="adjust" />
+          </IconButton>
+          <IconButton>
+            <ExpandCircleDownIcon className="adjust" />
+          </IconButton>
+        </div>
+      </div>
 
-        <
-        div className = "sidebar__search" > < /div>
+      <div className="sidebar__search"></div>
 
-        <
-        div className = "sidebare__chats" > < /div> <
-        /div>
-    );
+      <div className="sidebare__chats"></div>
+    </div>
+  );
 }
 
 export default Sidebar;
