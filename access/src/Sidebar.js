@@ -3,9 +3,12 @@ import "./Sidebar.css";
 import MessageIcon from "@mui/icons-material/Message";
 import FaceIcon from "@mui/icons-material/Face";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
-import PersonIcon from "@mui/icons-material/Person";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AutorenewIcon from "@mui/icons-material/Autorenew";
-import { Icon, IconButton } from "@mui/material";
+import { Avatar, Icon, IconButton } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
+import SidebarChat from "./SidebarChat";
+
 
 function Sidebar() {
     return ( <
@@ -13,7 +16,7 @@ function Sidebar() {
         <
         div className = "sidebar__header" >
         <
-        PersonIcon / >
+        Avatar / >
 
         <
         div className = "sidebar__headerRight" >
@@ -37,10 +40,30 @@ function Sidebar() {
         /div>
 
         <
-        div className = "sidebar__search" > < /div>
+        div className = "sidebar__search" >
+        <
+        div className = "sidebar__searchContainer" >
+        <
+        SearchIcon / >
+        <
+        input placeholder = "Search for a person"
+        type = "text" / >
+        <
+        /div> <
+        /div>
 
         <
-        div className = "sidebare__chats" > < /div> <
+        div className = "sidebar__chats" >
+        <
+        SidebarChat addNewChat / >
+        <
+        SidebarChat / >
+        <
+        SidebarChat / >
+        <
+        SidebarChat / >
+        <
+        /div> <
         /div>
     );
 }
