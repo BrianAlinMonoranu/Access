@@ -2,8 +2,9 @@ import { Avatar, createChainedFunction, IconButton } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import './SidebarChat.css';
+import db from './firebase';
 
-function SidebarChat({ addNewChat }) {
+function SidebarChat({ id, name, addNewChat }) {
 
     const [randomSeed, setRandomSeed] = useState('');
 
@@ -14,10 +15,13 @@ function SidebarChat({ addNewChat }) {
 
 
     const createChat = () => {
-        const roomName = prompt("Please enter name for chat");
+        const roomName = prompt("Please enter name for chat room");
 
         if (roomName) {
 
+            db.collection('rooms').add({
+                name: roomName,
+            })
         }
     };
 
@@ -31,7 +35,7 @@ function SidebarChat({ addNewChat }) {
             <
             div className = 'sidebarChat__info' >
             <
-            h2 > CS 2024 < /h2> <
+            h2 > { name } < /h2> <
             p > Last Message.... < /p> <
             /div> <
             /div>

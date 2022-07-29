@@ -20,6 +20,8 @@ function Chat() {
         e.preventDefault();
 
         console.log("You typed ", userInput);
+
+        setUserInput('');
     };
 
     return ( <
